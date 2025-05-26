@@ -1,0 +1,113 @@
+/* style.css */
+
+/* Importa a fonte Inter do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Estilos globais para o corpo */
+body {
+    font-family: 'Inter', sans-serif; /* Define a fonte principal para o corpo */
+    background-color: #b4e2bc; /* Cor de fundo suave */
+    color: #374151; /* Cor do texto padrão */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Garante que o corpo ocupe a altura total da viewport */
+}
+
+/* Estilos para o contêiner principal */
+.container {
+    max-width: 1200px; /* Largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+    padding: 1rem; /* Preenchimento interno */
+    flex-grow: 1; /* Permite que o contêiner cresça para preencher o espaço disponível */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #aeddbc; /* Fundo branco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 0.5rem; /* Cantos arredondados */
+    padding: 1.5rem; /* Preenchimento */
+    margin-bottom: 2rem; /* Margem inferior */
+    text-align: center; /* Centraliza o texto */
+}
+
+header h1 {
+    font-size: 2.25rem; /* Tamanho da fonte grande */
+    font-weight: 700; /* Negrito */
+    color: #10B981; /* Cor verde vibrante */
+    margin-bottom: 1rem; /* Margem inferior */
+}
+
+header svg {
+    color: #4B5563; /* Cor dos ícones */
+}
+
+/* Estilos para a seção principal */
+main {
+    background-color: #ffffff; /* Fundo branco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 0.5rem; /* Cantos arredondados */
+    padding: 1.5rem; /* Preenchimento */
+}
+
+main h2 {
+    font-size: 2rem; /* Tamanho da fonte */
+    font-weight: 600; /* Semi-negrito */
+    text-align: center; /* Centraliza o texto */
+    color: #374151; /* Cor do texto */
+    margin-bottom: 1.5rem; /* Margem inferior */
+}
+
+/* Estilos para as colunas de conteúdo */
+.flex-col > div {
+    border: 1px solid #e5e7eb; /* Borda suave */
+    border-radius: 0.5rem; /* Cantos arredondados */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Sombra leve */
+    padding: 1rem; /* Preenchimento */
+}
+
+.flex-col > div p {
+    font-size: 1.125rem; /* Tamanho da fonte */
+    font-weight: 500; /* Médio */
+    color: #4B5563; /* Cor do texto */
+    margin-bottom: 1rem; /* Margem inferior */
+}
+
+.flex-col > div ul {
+    list-style-type: disc; /* Tipo de marcador de lista */
+    list-style-position: inside; /* Posição do marcador */
+    color: #6B7280; /* Cor do texto da lista */
+}
+
+.flex-col > div ul li {
+    margin-bottom: 0.5rem; /* Margem inferior para itens da lista */
+}
+
+/* Estilos para o rodapé */
+footer {
+    background-color: #f9fafb; /* Fundo cinza claro */
+    text-align: center; /* Centraliza o texto */
+    padding: 1rem; /* Preenchimento */
+    margin-top: 2rem; /* Margem superior */
+    border-top-left-radius: 0.5rem; /* Cantos arredondados no topo */
+    border-top-right-radius: 0.5rem; /* Cantos arredondados no topo */
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.05); /* Sombra superior */
+}
+
+footer p {
+    color: #6B7280; /* Cor do texto */
+    font-size: 0.875rem; /* Tamanho da fonte pequeno */
+}
+
+/* Responsividade para telas menores (mobile first com Tailwind) */
+@media (min-width: 768px) {
+    .md\:flex-row {
+        flex-direction: row; /* Altera para linha em telas médias e maiores */
+    }
+    .md\:space-x-8 > * + * {
+        margin-left: 2rem; /* Espaçamento horizontal */
+    }
+    .md\:w-1\/2 {
+        width: 50%; /* Ocupa metade da largura em telas médias e maiores */
+    }
+}
